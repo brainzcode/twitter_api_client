@@ -19,10 +19,16 @@ const AdvocatePage = () => {
 	return (
 		<>
 			{advocate && (
-				<div>
-					<h1>{advocate.username}</h1>
-					<p>{advocate.bio}</p>
-				</div>
+				<div className='advocate_preview_wrapper'>
+					<img
+						className='advocate_preview_image'
+						src={advocate.profile_pic}
+						alt='profile'
+					/>
+				<strong>{advocate.name}</strong>
+				<a href={advocate.twitter}>@{advocate.username}</a>
+				<p>{advocate.bio}</p>
+			</div>
 			)}
 		</>
 	);

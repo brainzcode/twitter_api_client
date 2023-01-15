@@ -53,7 +53,7 @@ const Footer = () => {
 						<span className='logo'>Twitter API</span>
 						<span className='copyRight'>
 							&copy;
-							{new Date().getFullYear()}, All Rights Reserved
+							{new Date().getFullYear()}, Aknowledgement: <a href=""></a>
 						</span>
 					</div>
 				</div>
