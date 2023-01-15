@@ -1,9 +1,32 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const HomePage = () => {
+	const [advocates, setAdvocates] = useState([]);
+	useEffect(() => {
+        const getData = async () => {
+            const res = await axios.get('https://cados.up.railway.app/advocates/');
+            setAdvocates(res.data.advocates)
+            console.log(res)
+        };
+        getData()
+    }, []);
+
+
 	return (
-		<div>
-			<h1>Home Page</h1>
+		<div className='home_page'>
+			<h1>Twitter Accounts of Developer Advocates</h1>
+            <div className='advocate_list'>
+                {advocates.map((advocate, index) => (
+                    <div className='advocate_preview_wrapper' key={index}>
+                        <img className='advocate_preview_image' src={advocate.profile_pic} alt="profile" />
+                        <strong>{advocate.name}</strong>
+                        <a href={advocate.twitter}>@{advocate.username}</a>
+                        <Link to={`/advocates/${advocate.username}`}>View</Link>
+                    </div>
+                ))}
+            </div>
 		</div>
 	);
 };
