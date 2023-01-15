@@ -2,39 +2,109 @@
 }
 
 .home_page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .advocate_list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
 }
 
 .advocate_preview_wrapper {
-  width: 300px;
+	width: 300px;
 }
 
 .advocate_preview_image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid aquamarine;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid aquamarine;
 }
 
 body {
-  background-size: cover;
-	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAAXNSR0IArs4c6QAAAEhJREFUGFcFwcEJgDAQRNG/wcSDghc7sAT7r0oEjdkZ34t6nE4KStPmxrgvSnb0vQTzblIwNWJdcH9AA5RE1M0QWAYbagEnSPzNaCFk7a7RYgAAAABJRU5ErkJggg==");
-  color: aliceblue;
+	background-size: cover;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAAXNSR0IArs4c6QAAAEhJREFUGFcFwcEJgDAQRNG/wcSDghc7sAT7r0oEjdkZ34t6nE4KStPmxrgvSnb0vQTzblIwNWJdcH9AA5RE1M0QWAYbagEnSPzNaCFk7a7RYgAAAABJRU5ErkJggg==');
+	color: aliceblue;
 }
 
 a {
-  color: aquamarine;
-  text-decoration: none;
+	color: aquamarine;
+	text-decoration: none;
 }
 
+/* FOOTER */
+
+.footer {
+	margin: 4rem 8rem 1.4rem 8rem;
+}
+
+.top {
+	display: flex;
+	gap: 3rem;
+}
+
+.item {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-align: justify;
+	font-size: 0.85rem;
+}
+
+/* h1 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #555;
+} */
+
+ul {
+	text-decoration: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* li {
+	padding: 0.25rem 0 0.25rem 0;
+	color: #555;
+	cursor: pointer;
+} */
+
+/* span {
+	color: #626262;
+} */
+
+.bottom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	color: #8b008b;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.copyRight {
+	margin-left: 1.2rem;
+	font-size: 0.85rem;
+	color: #626262;
+}
+
+.right {
+	height: 50px;
+}
