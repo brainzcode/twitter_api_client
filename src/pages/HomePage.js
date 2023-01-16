@@ -13,14 +13,15 @@ const HomePage = () => {
 
 	const getData = async (query = '') => {
 		const res = await axios.get(
-			`https://cados.up.railway.app/advocates/?query=${query}`
+			`http://localhost:PORT/advocates?query=${query}`
+			// `https://cados.up.railway.app/advocates/?query=${query}`
 		);
-		setAdvocates(res.data.advocates);
-		setTotal(res.data.total);
-		setPagination(res.data.pagination);
-		setResults(res.data.pagination.results_found);
+		setAdvocates(res.data);
+		// setTotal(res.data.total);
+		// setPagination(res.data.pagination);
+		// setResults(res.data.pagination.results_found);
 
-		console.log(res.data.pagination.results_found);
+		console.log(res.data);
 	};
 	const searchData = (e) => {
 		e.preventDefault();

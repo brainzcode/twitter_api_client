@@ -8,10 +8,11 @@ const AdvocatePage = () => {
 	useEffect(() => {
 		const getData = async () => {
 			const res = await axios.get(
-				`https://cados.up.railway.app/advocates/${username}`
+				`http://localhost:PORT/advocates/${username}`
+				// `https://cados.up.railway.app/advocates/${username}`
 			);
-			setAdvocate(res.data.advocate);
-			console.log(res);
+			setAdvocate(res.data);
+			console.log(res.data);
 		};
 		getData();
 	}, [username]);
@@ -25,10 +26,10 @@ const AdvocatePage = () => {
 						src={advocate.profile_pic}
 						alt='profile'
 					/>
-				<strong>{advocate.name}</strong>
-				<a href={advocate.twitter}>@{advocate.username}</a>
-				<p>{advocate.bio}</p>
-			</div>
+					<strong>{advocate.name}</strong>
+					<a href={advocate.twitter}>@{advocate.username}</a>
+					<p>{advocate.bio}</p>
+				</div>
 			)}
 		</>
 	);
