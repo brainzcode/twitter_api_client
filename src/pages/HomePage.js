@@ -31,7 +31,7 @@ const HomePage = () => {
 	return (
 		<div className='home_page'>
 			<Link to='/'>
-				<h1>TwitterAPI</h1>
+				<h1 className='home_page_logo'>TwitterAPI</h1>
 			</Link>
 
 			<div className='home_page_header'>
